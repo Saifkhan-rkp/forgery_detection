@@ -29,7 +29,7 @@ def prepare_image(image_path):
     return np.array(convert_to_ela_image(image_path, 91).resize((128, 128))).flatten() / 255.0
 
 def main():
-    st.title("Image Authenticity Checker")
+    st.title("Image Forgery Detector")
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
