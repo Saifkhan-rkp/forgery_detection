@@ -1,7 +1,7 @@
 # import cv2
 import numpy as np
 from PIL import ImageChops, ImageEnhance, Image
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import streamlit as st
 import os
 import time
