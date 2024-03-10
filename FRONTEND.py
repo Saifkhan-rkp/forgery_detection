@@ -63,8 +63,9 @@ def main():
         uploaded_image = Image.open(uploaded_file)
         uploaded_image.save(temp_path)
 
+        # print("\n\n\n",os.getcwd()+"/model_casia_run1.h5","\n\n\n\n\n\n")
         # Load the pre-trained model
-        model = load_model(r"./model_casia_run1.h5")
+        model = load_model(os.getcwd()+"/model_casia_run1.h5")
 
         # Prepare and predict on the image
         image = prepare_image(temp_path)
