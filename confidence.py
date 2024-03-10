@@ -63,7 +63,7 @@ def main():
         uploaded_image.save(temp_path)
 
         # Load the pre-trained model
-        model = load_model(r"D:\PYTHON\TECHSAKSHAM\Project\model_casia_run1.h5")
+        model = load_model(r"./model_casia_run1.h5")
 
         # Prepare and predict on the image
         image = prepare_image(temp_path)
@@ -73,12 +73,12 @@ def main():
         # Display the result
         if y_pred[0][0] > 0.5:
             percent = y_pred[0][0] * 100
-            st.success(f"Real Image: {percent}%")
+            st.success(f"Real Image: {round(percent, 2)}%")
         else:
             percent = 100 - y_pred[0][0] * 100
             if percent > 98:
                 st.error("image seems to be cropped")
-            st.error(f"Tampered Image: {percent}%")
+            st.error(f"Tampered Image: {round(percent, 2)}%")
 
         # Remove the temporary file
         os.remove(temp_path)
