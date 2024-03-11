@@ -65,7 +65,7 @@ def main():
 
         # print("\n\n\n",os.getcwd()+"/model_casia_run1.h5","\n\n\n\n\n\n")
         # Load the pre-trained model
-        model = load_model("/model_casia_run1.h5")
+        model = load_model(r"model_casia_run1.h5")
 
         # Prepare and predict on the image
         image = prepare_image(temp_path)
