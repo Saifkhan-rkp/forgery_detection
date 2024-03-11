@@ -20,12 +20,10 @@ def set_background(image_file):
              
              background-image: url(data:image/png;base64,{b64_encoded});
              background-size:cover;
-             
-            
         }}
         </style>
     """
-st.markdown(style, unsafe_allow_html=True)
+    st.markdown(style, unsafe_allow_html=True)
 st.title("Image Forgery Detector")
 
 show_pages(
