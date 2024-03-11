@@ -5,6 +5,7 @@ from keras.models import load_model
 import streamlit as st
 import os
 import time
+import base64
 from st_pages import show_pages, Page, add_page_title
 
 
