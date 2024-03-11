@@ -22,8 +22,6 @@ def set_background(image_file):
              
              background-image: url(data:image/png;base64,{b64_encoded});
              background-size:cover;
-             
-            
         }}
         </style>
     """
