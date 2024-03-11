@@ -5,8 +5,10 @@ from keras.models import load_model
 import streamlit as st
 import os
 import time
+import base64
 from st_pages import show_pages, Page, add_page_title
 
+st.title("Image Forgery Detector")
 
 
 def set_background(image_file):
@@ -24,8 +26,7 @@ def set_background(image_file):
         }}
         </style>
     """
-st.markdown(style, unsafe_allow_html=True)
-st.title("Image Forgery Detector")
+    st.markdown(style, unsafe_allow_html=True)
 
 show_pages(
     [
