@@ -1,7 +1,7 @@
 # Image Forgery Detection Streamlit App
 
 This is a Streamlit-based Python application for detecting image forgery, deployed using Microsoft Azure and Docker.
-LIVE URL : https://tsp-image-forgery.azurewebsites.net [https://tsp-image-forgery.azurewebsites.net]
+LIVE URL : [https://tsp-image-forgery.azurewebsites.net](https://tsp-image-forgery.azurewebsites.net)
 
 ## Overview
 
@@ -53,11 +53,8 @@ To run the application locally, follow these steps:
 
 ## Contributors
 
-- ABHISHEK KHOND [https://github.com/AbhishekKhond005]
-- SAIF KHAN [https://github.com/Saifkhan-rkp]
-- DEVASHISH JAYBHAYE [https://github.com/Devashish1910]
-- PIYUSH SINGH [https://github.com/45Piyush]
+- [ABHISHEK KHOND](https://github.com/AbhishekKhond005)
+- [SAIF KHAN](https://github.com/Saifkhan-rkp)
+- [DEVASHISH JAYBHAYE](https://github.com/Devashish1910)
+- [PIYUSH SINGH](https://github.com/45Piyush)
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
