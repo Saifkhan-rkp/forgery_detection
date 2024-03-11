@@ -25,7 +25,7 @@ def set_background(image_file):
         }}
         </style>
     """
-st.markdown(style, unsafe_allow_html=True)
+    st.markdown(style, unsafe_allow_html=True)
 st.title("Image Forgery Detector")
 
 show_pages(
