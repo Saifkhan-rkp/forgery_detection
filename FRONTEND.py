@@ -7,6 +7,24 @@ import os
 import time
 from st_pages import show_pages, Page, add_page_title
 
+
+
+def set_background(image_file):
+    with open(image_file, "rb") as f:
+        img_data = f.read()
+    b64_encoded = base64.b64encode(img_data).decode()
+    style = f"""
+        <style>
+         .stApp {{
+             
+             background-image: url(data:image/png;base64,{b64_encoded});
+             background-size:cover;
+             
+            
+        }}
+        </style>
+    """
+st.markdown(style, unsafe_allow_html=True)
 st.title("Image Forgery Detector")
 
 show_pages(
@@ -17,6 +35,14 @@ show_pages(
         # Page("image-forgery-detector.ipynb","image-forgery-detector.ipynb", "3️⃣"),
     ]
 )
+def show_sample_images_sidebar():
+    sample_images = ["photo.jpg", "photo1.jpg"]
+    
+    st.sidebar.subheader("Sample Images for Testing:")
+    
+    for idx, image_path in enumerate(sample_images):
+        st.sidebar.image(image_path, caption=f"Sample Image {idx+1}", use_column_width=True)
+
 
 
 def convert_to_ela_image(path, quality):
@@ -46,9 +72,9 @@ def prepare_image(image_path):
 
 def main():
 
-
+    set_background("bg3.png")
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-
+    show_sample_images_sidebar()
     if uploaded_file is not None:
         st.image(uploaded_file, caption="Uploaded Image.", use_column_width=True)
         st.write("")
